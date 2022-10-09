@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from "react";
 import {Link} from "react-router-dom";
 
-import CategoryRow from "../components/CategoryRow";
+import CategoryListItem from "../components/CategoryListItem";
 import dao from "../ajax/dao";
 
 const CategoryListView = () => {
@@ -28,7 +28,7 @@ const CategoryListView = () => {
         <div>
             {categories && categories.length>0 ? 
                 categories.map((item)=>
-                    <CategoryRow    key={item.id} 
+                    <CategoryListItem    key={item.id} 
                                     id={item.id} 
                                     category={item} />
             ) : "no categories yet"

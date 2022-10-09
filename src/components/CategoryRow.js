@@ -1,6 +1,6 @@
 import React from "react";
 
-const CategoryRow = ({index, category}) => {
+const CategoryRow = ({category}) => {
     return (<div>{`${category.id} : ${category.name}`}</div>);
 }
 
