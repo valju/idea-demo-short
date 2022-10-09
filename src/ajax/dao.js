@@ -1,13 +1,17 @@
 const baseUrl = process.env.REACT_APP_BE_SERVER_BASE_URL;
 
+
 const fetchCategories = async () => {
-    const resp = await fetch(`${baseUrl}/category/all`);
-    const data = await resp.json();
+    const request = new Request(`${baseUrl}/category/all`,{
+        method: 'GET',  
+    });
+
+    const response = await fetch(request);
+    const data = await response.json();
     return data;
 };
 
-const dao = {
+
+export default {
     fetchCategories,
 };
-
-export default dao;
