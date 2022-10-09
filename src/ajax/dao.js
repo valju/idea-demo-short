@@ -11,7 +11,20 @@ const fetchCategories = async () => {
     return data;
 };
 
+const fetchOneCategoryById = async (categoryId) => {
+    const request = new Request(`${baseUrl}/category/${categoryId}`,{
+        method: 'GET',  
+    });
+
+    const response = await fetch(request);
+    const data = await response.json();
+
+    const category = data && data.length>0 ? data[0] : null;
+    return category;
+};
+
 
 export default {
     fetchCategories,
+    fetchOneCategoryById,
 };

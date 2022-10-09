@@ -9,8 +9,6 @@ function App() {
         <nav>
           <span>Extra navbar at top: </span>
           <NavLink to="/category">Categories</NavLink>
-          <span> </span>
-          <NavLink to="/category/1">Category Detail</NavLink>
         </nav>
         <Routes>
           <Route path="category" element={<CategoryListView />} />

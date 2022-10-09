@@ -36,9 +36,7 @@ const CategoryListView = () => {
         </div>
 
         <div>***</div>
-        <nav>
-            <Link to="/category/1">Go to detailsview</Link>
-        </nav>    
+ 
 
         </>
     );
