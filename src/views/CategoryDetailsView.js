@@ -1,14 +1,18 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import {Link, useParams } from "react-router-dom";
+
 
 const CategoryDetailsView = () => {
+    let params = useParams();
+    const categoryId = params.categoryId;
+
 
     return(
         <div>
             <h1>Hello from dummy CategoryDetailsView!</h1>
-
+            <p>{categoryId}</p>
             <nav>
-                <Link to="/categoryListURL">Back to list</Link>
+                <Link to="/category">Back to list</Link>
             </nav>            
         </div>
 

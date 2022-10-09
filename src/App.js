@@ -8,14 +8,13 @@ function App() {
       <div className="App">
         <nav>
           <span>Extra navbar at top: </span>
-          <NavLink to="categoryListURL">Categories</NavLink>
+          <NavLink to="/category">Categories</NavLink>
           <span> </span>
-          <NavLink to="categoryDetailsURL">Category Detail</NavLink>
+          <NavLink to="/category/1">Category Detail</NavLink>
         </nav>
         <Routes>
-          <Route path="/" />} />
-          <Route path="categoryListURL" element={<CategoryListView />} />
-          <Route path="categoryDetailsURL" element={<CategoryDetailsView />} />
+          <Route path="category" element={<CategoryListView />} />
+          <Route path="/category/:categoryId" element={<CategoryDetailsView />} />
         </Routes>
       </div>   
   );
