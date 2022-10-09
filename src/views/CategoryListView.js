@@ -1,4 +1,6 @@
 import React, {useState, useEffect} from "react";
+import {Link} from "react-router-dom";
+
 import CategoryRow from "../components/CategoryRow";
 import dao from "../ajax/dao";
 
@@ -32,35 +34,12 @@ const CategoryListView = () => {
             ) : "no categories yet"
         }
         </div>
+
+        <nav>
+            <Link to="/categoryDetailsURL">Go to detailsview</Link>
+        </nav>    
+
         </>
-    );
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-    
-   
-
-
-
-    return (
-        <div>
-        <h3>Categories</h3>
-        <div>
-            {categories? categories.map((item, index)=>
-                <CategoryRow key={index} index={index} category={item} />
-            ) : "no categories"
-        }
-        </div>
-        </div>
     );
 }
 
