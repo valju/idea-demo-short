@@ -6,10 +6,10 @@ const CategoryListItem = ({category}) => {
     return (
         <div>
             <Link to={`/category/${category.id}`}>
-                    <CategoryRow category={category} />
+                <CategoryRow category={category} />
             </Link>
             <span> </span>
-            <Link to={`/categoryDelete/${category.id}`}>
+            <Link to={`/category/delete/${category.id}`}>
                 <span>X</span>
             </Link>
         </div>

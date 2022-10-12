@@ -16,9 +16,9 @@ function App() {
         </nav>
         <Routes>
           <Route path="/" element={<HomeView />} />
-          <Route path="category" element={<CategoryListView />} />
+          <Route path="/category" element={<CategoryListView />} />
           <Route path="/category/:categoryId" element={<CategoryDetailsView />} />
-          <Route path="/categoryDelete/:categoryId" element={<CategoryDeleteConfirmationView />} />
+          <Route path="/category/delete/:categoryId" element={<CategoryDeleteConfirmationView />} />
         </Routes>
       </div>   
   );
