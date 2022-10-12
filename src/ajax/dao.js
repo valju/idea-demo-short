@@ -1,7 +1,7 @@
 const baseUrl = process.env.REACT_APP_BE_SERVER_BASE_URL;
 
 const fetchCategories = async () => {
-    const request = new Request(`${baseUrl}/category/all`,{
+    const request = new Request(`${baseUrl}/category/`,{
         method: 'GET',  
     });
 
