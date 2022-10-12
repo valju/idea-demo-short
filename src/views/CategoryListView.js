@@ -1,5 +1,4 @@
 import React, {useState, useEffect} from "react";
-import {Link} from "react-router-dom";
 
 import CategoryListItem from "../components/CategoryListItem";
 import dao from "../ajax/dao";
@@ -15,6 +14,7 @@ const CategoryListView = () => {
             setCategories(data);
         }
         refreshCategories();
+        
     },[]);
 
     useEffect(() => {
@@ -34,10 +34,6 @@ const CategoryListView = () => {
             ) : "no categories yet"
         }
         </div>
-
-        <div>***</div>
- 
-
         </>
     );
 }
