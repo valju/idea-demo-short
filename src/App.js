@@ -3,6 +3,7 @@ import './App.css';
 import HomeView from './views/HomeView';
 import CategoryListView from './views/CategoryListView';
 import CategoryDetailsView from './views/CategoryDetailsView';
+import CategoryDeleteConfirmationView from './views/CategoryDeleteConfirmationView';
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="home" element={<HomeView />} />
           <Route path="category" element={<CategoryListView />} />
           <Route path="/category/:categoryId" element={<CategoryDetailsView />} />
+          <Route path="/categoryDelete/:categoryId" element={<CategoryDeleteConfirmationView />} />
         </Routes>
       </div>   
   );

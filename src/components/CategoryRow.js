@@ -1,7 +1,7 @@
 import React from "react";
 
 const CategoryRow = ({category}) => {
-    return (<div>{`${category.id} : ${category.name}`}</div>);
+    return (<span>{`${category.id} : ${category.name}`}</span>);
 }
 
 export default CategoryRow;

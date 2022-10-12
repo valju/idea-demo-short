@@ -4,9 +4,15 @@ import {Link} from "react-router-dom";
 
 const CategoryListItem = ({category}) => {
     return (
-        <Link to={`/category/${category.id}`}>
-                <CategoryRow category={category} />
-        </Link>
+        <div>
+            <Link to={`/category/${category.id}`}>
+                    <CategoryRow category={category} />
+            </Link>
+            <span> </span>
+            <Link to={`/categoryDelete/${category.id}`}>
+                <span>X</span>
+            </Link>
+        </div>
     );
 }
 
