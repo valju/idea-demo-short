@@ -10,12 +10,12 @@ function App() {
       <div className="App">
         <nav>
           <span>Extra navbar at top: </span>
-          <NavLink to="/home">Home</NavLink>
+          <NavLink to="/">Home</NavLink>
           <span> </span>
           <NavLink to="/category">Categories</NavLink>
         </nav>
         <Routes>
-          <Route path="home" element={<HomeView />} />
+          <Route path="/" element={<HomeView />} />
           <Route path="category" element={<CategoryListView />} />
           <Route path="/category/:categoryId" element={<CategoryDetailsView />} />
           <Route path="/categoryDelete/:categoryId" element={<CategoryDeleteConfirmationView />} />
