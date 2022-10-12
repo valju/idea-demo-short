@@ -20,7 +20,7 @@ const CategoryDeleteConfirmationView = () => {
             const answer = await dao.deleteOneCategoryById(categoryId);
             console.log("answer: "+ answer);
             if(answer===true) {
-                setMessage(`Category ${category.name} deleted`);
+                setMessage(`Category "${category.name}" deleted`);
                 setCategory({});
             }
 
@@ -32,10 +32,9 @@ const CategoryDeleteConfirmationView = () => {
     return(
         <div>
             <h1>Deleting a Category</h1>
-
+            <div>{message}</div>
             { category && category.id !== undefined ?
                 <>
-                    <div>{message}</div>
                     <button onClick={()=>{deleteCategory()}}>Yes, delete!</button>
                 </>
                 : ""                
