@@ -13,8 +13,7 @@ const CategoryListView = () => {
             const data = await dao.fetchCategories();
             setCategories(data);
         }
-        refreshCategories();
-        
+        refreshCategories();       
     },[]);
 
     useEffect(() => {
@@ -29,7 +28,6 @@ const CategoryListView = () => {
             {categories && categories.length>0 ? 
                 categories.map((item)=>
                     <CategoryListItem    key={item.id} 
-                                    id={item.id} 
                                     category={item} />
             ) : "no categories yet"
         }

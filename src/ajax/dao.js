@@ -28,8 +28,8 @@ const deleteOneCategoryById = async (categoryId) => {
     const response = await fetch(request);
     const data = await response.json();
 
-    const category = data && data.returnValue===1 ? true : false;
-    return category;
+    const answer = data && data.returnValue===1 ? true : false;
+    return answer;
 };
 
 const dao = {
