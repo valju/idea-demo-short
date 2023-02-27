@@ -13,7 +13,7 @@ const CategoryDeleteConfirmationView = () => {
             setCategory(data);
         }
         getCategory();
-    },);
+    },[categoryId]);
 
     const deleteCategory = () => {
         async function doDeleteCategory (categoryId) {
@@ -23,7 +23,8 @@ const CategoryDeleteConfirmationView = () => {
                 setMessage(`Category "${category.name}" deleted`);
                 setCategory({});
             }
-
+            // this.props.history.push("/category"); 
+            // This would make auto-return to list possible
         }
         doDeleteCategory(categoryId);
     }
@@ -31,12 +32,10 @@ const CategoryDeleteConfirmationView = () => {
 
     return(
         <div>
-            <h1>Deleting a Category</h1>
+            <h1>Deleting a Category?</h1>
             <div>{message}</div>
             { category && category.id !== undefined ?
-                <>
-                    <button onClick={()=>{deleteCategory()}}>Yes, delete!</button>
-                </>
+                <button onClick={()=>{deleteCategory()}}>Yes, delete!</button>     
                 : ""                
             }
             
@@ -46,7 +45,7 @@ const CategoryDeleteConfirmationView = () => {
                 <dd>name: {category.name}</dd>
                 <dd>budget: {category.budgetLimit}</dd>
             </dl>
-            : "No category yet / anymore"
+            : "No category fetched yet OR category already deleted"
             }
             <nav>
                 <Link to="/category">Back to list</Link>

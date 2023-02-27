@@ -15,10 +15,10 @@ function App() {
           <NavLink to="/category">Categories</NavLink>
         </nav>
         <Routes>
-          <Route path="/" element={<HomeView />} />
           <Route path="/category" element={<CategoryListView />} />
           <Route path="/category/:categoryId" element={<CategoryDetailsView />} />
           <Route path="/category/delete/:categoryId" element={<CategoryDeleteConfirmationView />} />
+          <Route path="/" element={<HomeView />} />
         </Routes>
       </div>   
   );
