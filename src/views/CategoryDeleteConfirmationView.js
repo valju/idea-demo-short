@@ -23,8 +23,8 @@ const CategoryDeleteConfirmationView = () => {
                 setMessage(`Category "${category.name}" deleted`);
                 setCategory({});
             }
-            // this.props.history.push("/category"); 
-            // This would make auto-return to list possible
+            // history.push("/category"); 
+            // This should make auto-return to list possible
         }
         doDeleteCategory(categoryId);
     }
@@ -32,8 +32,7 @@ const CategoryDeleteConfirmationView = () => {
 
     return(
         <div>
-            <h1>Deleting a Category?</h1>
-            <div>{message}</div>
+            <h1>{message}</h1>
             { category && category.id !== undefined ?
                 <button onClick={()=>{deleteCategory()}}>Yes, delete!</button>     
                 : ""                
