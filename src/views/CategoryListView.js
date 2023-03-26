@@ -1,10 +1,11 @@
-import React, {useState, useEffect} from "react";
-
+import React, {useState, useEffect, useContext} from "react";
 import CategoryListItem from "../components/CategoryListItem";
 import dao from "../ajax/dao";
+import { AppContext } from "../AppContext";
 
 const CategoryListView = () => {
     const [categories, setCategories] = useState([]);
+    const appContext = useContext(AppContext);
 
     useEffect(() => {
         // ...do something ONLY when component did mount
@@ -24,6 +25,7 @@ const CategoryListView = () => {
     return (
         <>
         <h3>Categories</h3>
+        <span>Current category: {appContext.currentCategoryId}</span>
         <div>
             {categories && categories.length>0 ? 
                 categories.map((item)=>

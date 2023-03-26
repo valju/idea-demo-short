@@ -1,7 +1,9 @@
 CREATE A .env.local file in repo root with this line:
 
 REACT_APP_BE_SERVER_BASE_URL=http://localhost:8777/api
+PORT=8778
 
+The latter is the port you want the frontend dev-time server to run on.
 
 # IDEA CASE SHORT DEMO FOR E.G. AJAX
 
