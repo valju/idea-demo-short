@@ -1,4 +1,4 @@
-CREATE A .env.local file in repo root with this line:
+CREATE A .env.local file in repo root with these lines:
 
 REACT_APP_BE_SERVER_BASE_URL=http://localhost:8777/api
 PORT=8778
